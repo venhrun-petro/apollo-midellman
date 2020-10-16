@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= current_page.data.title || "Galas At Home" %></title>
+
+    <%= stylesheet_link_tag "theme" %>
+  </head>
+  <body class="wow-animate">
+    <%= partial "layouts/preloader" %>
+
+    <div id="page-wraper">
+      <%= partial "layouts/header" %>
+      <%= yield %>
+      <%= partial "partials/contact_us" %>
+      <%= partial "layouts/footer" %>
+    </div>
+
+    <%= partial "layouts/theme_scripts" %>
+  </body>
+</html>

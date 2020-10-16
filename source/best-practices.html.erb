@@ -1,0 +1,42 @@
+---
+title: Galas At Home - Virtual Fundraising Production Company
+---
+
+<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="<%= image_path 'intro-bg.jpg' %>">
+  <div class="container">
+    <div class="intro-content">
+      <div class="intro-content-inner">
+        <h1 class="">Best Practices for virtual galas</h1>
+        <h5 class="alt-title intro-sub-title">We help to collect the best practices for virtual live galas</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row">
+
+    <% blog('best_practices').articles.each do |article| %>
+      <div class="col-md-4 col-sm-6 mb-45">
+        <div class="blog-post">
+          <div class="post-media">
+            <%= image_tag 'intro-bg.jpg' %>
+          </div>
+          <div class="post-meta">
+            <span>by <%= article.data.author %>,</span>
+            <span class="post-date"><%= article.date.strftime('%d %b %Y') %></span>
+          </div>
+          <div class="post-header">
+            <h4 class="alt-title"><%= link_to article.title, article %></h4>
+          </div>
+          <div class="post-entry">
+            <p><%= strip_tags(article.summary) %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    </div>
+  </div>
+</section>

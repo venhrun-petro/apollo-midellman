@@ -1,0 +1,35 @@
+<section id="<%= section_id %>%" class="section-padding">
+  <div class="container text-center">
+    <h1><%= title %></h1>
+    <p class="lead-lg max-width-700 mb-60"><%= subtitle %></p>
+  </div>
+
+  <div class="container">
+    <div class="rows portfolio-grid gallery-popup">
+
+      <% data[data_file].each do |item| %>
+        <div class="portfolio-item photography creative">
+          <div class="portfolio-box">
+            <% link_to image_path("#{images_dir}/#{item.image}"), class: 'porfolio-popup gallery-popup-link', title: "#{item.title} - #{item.subtitle}" do %>
+              <div class="portfolio-image-wrap">
+                <%= image_tag "#{images_dir}/placeholder.png" %>
+              </div>
+              <div class="portfolio-caption-mask">
+                <div class="portfolio-caption-text">
+                  <div class="portfolio-caption-tb-cell">
+                    <h5 class="alt-title"><%= item.title %></h5>
+                    <p><%= item.subtitle %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <%= partial 'partials/gallery/cta', locals: { show_cta: show_cta ||= false } %>
+
+</section>

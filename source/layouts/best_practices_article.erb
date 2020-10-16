@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= current_page.data.title || "Galas At Home" %></title>
+
+    <%= stylesheet_link_tag "theme" %>
+  </head>
+  <body class="wow-animate">
+    <%= partial "layouts/preloader" %>
+
+    <div id="page-wraper">
+      <%= partial "layouts/header" %>
+
+      <section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="<%= image_path 'intro-bg.jpg' %>">
+        <div class="container">
+          <div class="intro-content">
+            <div class="intro-content-inner">
+              <h1 class="">Best Practices for virtual galas</h1>
+              <h5 class="alt-title intro-sub-title">We help to collect the best practices for virtual live galas</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog-single" class="section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div class="blog-post">
+                <div class="post-meta">
+                  <span>by <%= current_article.data.author %></span>
+                  <span class="post-date"><%= current_article.date.strftime('%d %b %Y') %></span>
+                </div>
+
+                <div class="post-header">
+                  <h2 class="alt-title"><%= current_article.title %></h2>
+                </div>
+
+                <div class="post-media">
+                  <img alt="blog" src="<%= image_path 'intro-bg.jpg' %>">
+                </div>
+
+                <div class="post-entry">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%= partial "partials/contact_us" %>
+      <%= partial "layouts/footer" %>
+    </div>
+
+    <%= partial "layouts/theme_scripts" %>
+  </body>
+</html>

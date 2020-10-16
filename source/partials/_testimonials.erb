@@ -1,0 +1,21 @@
+<section id="testimonials" class="section-padding dark-bg pos-section overlay-dark">
+  <!-- page triangle shape -->
+  <div class="page-triangle white-bg"></div>
+  <!-- End page triangle shape -->
+  <div class="container">
+    <div class="owl-carousel testimonial-carousel nf-carousel-theme white">
+      <% data.testimonials.each do |testimonial| %>
+
+      <div class="item">
+        <div class="testimonial text-center max-width-700">
+          <div class="page-icon-sm"><i class="icon-quote"></i></div>
+          <h2>What People Say?</h2>
+          <p class="lead-lg">"<%= testimonial.text %>"</p>
+          <h6 class="quote-author alt-title"><%= testimonial.name %> <span class="text-regular">( <%= testimonial.info %> )</span></h6>
+        </div>
+      </div>
+
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<header id="header" class="header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <div class="logo">
+      <% link_to '/' do %>
+        <%= image_tag 'logo-light.png', { class: 'logo-light', alt: 'Logo' } %>
+        <%= image_tag 'logo-dark.png', { class: 'logo-dark', alt: 'Logo' } %>
+      <% end %>
+    </div>
+    <!-- End Logo -->
+
+    <!-- Mobile Navbar Icon -->
+    <div class="nav-mobile nav-bar-icon">
+      <span></span>
+    </div>
+    <!-- End Mobile Navbar Icon -->
+
+    <!-- Navbar Navigation -->
+    <div class="nav-menu">
+      <ul class="nav-menu-inner">
+        <li>
+          <%= link_to 'Home', '/' %>
+        </li>
+        <li>
+          <%= link_to 'Best Practices', '/best-practices' %>
+        </li>
+        <li>
+          <a href="#">Event Inspiration</a>
+        </li>
+        <li>
+          <a href="mailto:hello@galasathome.com">hello@galasathome.com</a>
+        </li>
+        <li>
+          <a href="tel:+18444694252">1-844-4MY-GALA</a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Navbar Navigation -->
+
+  </div>
+</header>

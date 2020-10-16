@@ -1,0 +1,38 @@
+<section id="pricing" class="section-padding">
+  <div class="container text-center">
+    <h1 class="mb-20">Simple, Transparent Pricing</h1>
+    <p class="lead-lg max-width-700 mb-60">Tell us your vision and we make it happen</p>
+    <div class="row">
+
+      <% data.pricing.each_with_index do |entry, idx| %>
+        <div class="col-md-4 mb-sm-30 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.<%= idx + 1 %>s">
+          <div class="pricing-box">
+            <div class="pricing-title mb-20">
+              <h5 class="alt-title"><%= entry.title %></h5>
+            </div>
+            <div class="pricing-subtitle">
+              <h6 class="alt-title"><%= entry.subtitle %></h5>
+            </div>
+            <div class="pricing-price">
+              <p>
+                <span class="pricing-price-lg"><%= entry.cost %></span>
+              </p>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <% entry.features.each do |feature| %>
+                  <li><%= feature %></li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="pricing-button">
+              <%= link_to '<i class="fa fa-user left"></i>Free Exploration Call', entry.link, class: 'btn btn-md btn-color-outline', target: '_blank' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="rows mt-30">Have a question?, Please contact for more information. <a class="scroll-down color" href="#contact-us"><b>Contact us</b></a></div>
+  </div>
+</section>
